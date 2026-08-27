@@ -1,3 +1,7 @@
-# lp1
+# lenguaje de programacion I
 
-## Edwin Sebastian de Jesus Coaguila Suarez
+## Autor
+- Edwin Coaguila Suarez
+
+## descripción
+- Este respositoria contendra todos los laboratorios del curso de "Lenguaje de Programación I".
