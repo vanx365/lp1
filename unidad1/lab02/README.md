@@ -4,4 +4,4 @@ Separa el número en dos partes:
   - `residuo = entrada % 10` → el último dígito
 - Las suma: `entrada = entero + residuo`
 - Repite mientras esa suma tenga más de un dígito (`> 9`)
-- Cuando la suma ya es un solo dígito, s
+- Cuando la suma ya es un solo dígito, se detiene y ese es el resultado
