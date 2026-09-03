@@ -12,7 +12,17 @@ while (seguir) {
     } 
     else{
         seguir=false
-    
     }
+    entrada=entero+residuo
+
 } 
+    return entrada;
 }
+int main({
+    int num;
+    cout<<"ingrese un numero: "<<endl;
+    cin>>num;
+
+    cout <<"la raiz digital es: "<< RaizDig(int num)<<endl;
+    return 0; 
+})
