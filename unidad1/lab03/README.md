@@ -7,3 +7,9 @@
 - ¿Qué hace? Se salta la iteración actual y pasa directo a la siguiente vuelta del bucle. No sale del bucle, solo se salta lo que queda de esa repetición.
 ## Break 
 - ¿Qué hace? Termina el bucle completamente y de inmediato. Sale del bucle y no continúa con las iteraciones restantes.
+
+## Integrantes 
+- Edwin Sebastian de Jesus Coaguila Suarez
+- Kendra Alarcon
+- Piero Carrion 
+- Aaron Ojeda Iquer
