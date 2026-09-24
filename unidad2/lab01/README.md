@@ -199,7 +199,7 @@ Hay un 21? si
 Cada integrante desarrolló y explica un ejercicio. Los tres usan situaciones del día a día para que se vea para qué sirve cada método.
 
 ### 📚 Ejercicio 1: La pila de libros devueltos
-**Expone:** José Luis Hancco Valencia &nbsp;·&nbsp; **Archivo:** [`ejercicio1_pila_de_libros.cpp`](ejercicio1_pila_de_libros.cpp)
+**Expone:** José Luis Hancco Valencia &nbsp;·&nbsp; **Archivo:** [`ejercicio1_pila_de_libros_facil.cpp`](ejercicio1_pila_de_libros_facil.cpp)
 
 **Resumen.** En la mesa de la biblioteca los libros devueltos se apilan: el último que llega queda arriba. Eso es justo lo que hace `push_front`. El programa apila tres libros, muestra el de arriba con `front`, cuenta cuántos hay con `distance` (porque no existe `size`), mete un libro debajo del primero con `insert_after` y al final los va guardando uno por uno con `pop_front` hasta que la pila queda vacía.
 
@@ -222,7 +222,7 @@ Pila vacia? si
 </details>
 
 ### 📝 Ejercicio 2: Juntar las notas de dos secciones
-**Expone:** Sebastián Coaguila &nbsp;·&nbsp; **Archivo:** [`ejercicio2_notas_secciones.cpp`](ejercicio2_notas_secciones.cpp)
+**Expone:** Sebastián Coaguila &nbsp;·&nbsp; **Archivo:** [`ejercicio2_notas_secciones_intermedio.cpp`](ejercicio2_notas_secciones_intermedio.cpp)
 
 **Resumen.** Tenemos las notas de la sección A y de la sección B, y queremos una sola lista limpia. Primero se ordenan las dos con `sort`, porque `merge` solo funciona bien con listas ya ordenadas. `merge` pasa los nodos de B a A sin copiarlos, así que B queda vacía. Luego `unique` quita las notas repetidas (sirve porque ya están ordenadas y los repetidos quedan juntos), `remove_if` con una lambda saca a los desaprobados y `reverse` deja la lista de mayor a menor.
 
@@ -243,7 +243,7 @@ Mayor a menor: 20 18 17 15 14 11
 </details>
 
 ### 🧾 Ejercicio 3: Lista de asistencia en orden alfabético
-**Expone:** Robert Vilca &nbsp;·&nbsp; **Archivo:** [`ejercicio3_lista_asistencia.cpp`](ejercicio3_lista_asistencia.cpp)
+**Expone:** Robert Vilca &nbsp;·&nbsp; **Archivo:** [`ejercicio3_lista_asistencia_dificil.cpp`](ejercicio3_lista_asistencia_dificil.cpp)
 
 **Resumen.** Los alumnos llegan en desorden y la lista tiene que quedar siempre en orden alfabético. Aquí se ve el truco más importante de `forward_list`: se camina con **dos iteradores**, `anterior` y `actual`. Para insertar, se avanza hasta encontrar el lugar y se usa `insert_after(anterior, ...)`. Si el nombre va primero, `anterior` sigue en `before_begin()` y el alumno queda al inicio. Para retirar a un alumno se hace lo mismo y se borra con `erase_after(anterior)`. Si el nombre no está en la lista, no se toca nada.
 
