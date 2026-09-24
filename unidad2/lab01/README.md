@@ -51,7 +51,7 @@
 | Integrante | Parte que expone |
 |:---:|:---|
 | **José Luis Hancco Valencia** | Presentación, qué es la forward_list y Ejercicio 1 |
-| **Sebastián Coaguila** | Comparación, métodos, Ejercicio 2 y resumen final |
+| **Sebastián Coaguila** | Comparación, métodos, Ejercicio 2 |
 | **Robert Vilca** | Ejercicio 3 y problema de OmegaUP |
 
 <br>
