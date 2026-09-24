@@ -273,7 +273,7 @@ Lista final:
 
 ## 🏆 Problema de OmegaUP: Josefo
 
-**Expone:** Robert Vilca &nbsp;·&nbsp; **Archivo:** [`omegaup_josefo.cpp`](omegaup_josefo.cpp) &nbsp;·&nbsp; **Problema:** [enlace en OmegaUP](PEGAR_ENLACE_DE_OMEGAUP)
+**Expone:** Robert Vilca &nbsp;·&nbsp; **Archivo:** [`omegaup_josefo.cpp`](omegaup_josefo.cpp) &nbsp;·&nbsp; **Problema:** [enlace en OmegaUP](omegaup_josefo.cpp)
 
 **Enunciado.** Hay `n` personas en círculo, numeradas del 1 al `n`. Se cuenta de `k` en `k` y la persona donde cae la cuenta sale del círculo. Se sigue contando desde la siguiente hasta que queda una sola. Hay que imprimir el orden en que salen y quién sobrevive.
 
