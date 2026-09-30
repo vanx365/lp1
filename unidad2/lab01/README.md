@@ -9,7 +9,7 @@
 ![C++](https://img.shields.io/badge/C%2B%2B-17-00599C?style=for-the-badge&logo=cplusplus&logoColor=white)
 ![Container](https://img.shields.io/badge/Container-forward__list-E8833A?style=for-the-badge)
 ![Header](https://img.shields.io/badge/Header-%3Cforward__list%3E-14213D?style=for-the-badge)
-![OmegaUP](https://img.shields.io/badge/OmegaUP-Josefo-2F6690?style=for-the-badge)
+![OmegaUP](https://img.shields.io/badge/OmegaUP-1502%20Josephus-2F6690?style=for-the-badge)
 
 <br>
 
@@ -51,7 +51,7 @@
 | Integrante | Parte que expone |
 |:---:|:---|
 | **José Luis Hancco Valencia** | Presentación, qué es la forward_list y Ejercicio 1 |
-| **Sebastián Coaguila** | Comparación, métodos, Ejercicio 2 |
+| **Sebastián Coaguila** | Comparación, métodos, Ejercicio 2 y resumen final |
 | **Robert Vilca** | Ejercicio 3 y problema de OmegaUP |
 
 <br>
@@ -69,7 +69,7 @@
 3. [Métodos principales](#-métodos-principales)
 4. [forward_list y la librería algorithm](#-forward_list-y-la-librería-algorithm)
 5. [Ejercicios del grupo](#-ejercicios-del-grupo)
-6. [Problema de OmegaUP](#-problema-de-omegaup-josefo)
+6. [Problema de OmegaUP](#-problema-de-omegaup-1502-josephus)
 7. [Cómo compilar y ejecutar](#%EF%B8%8F-cómo-compilar-y-ejecutar)
 8. [Estructura del repositorio](#-estructura-del-repositorio)
 9. [Conclusiones](#-conclusiones)
@@ -199,7 +199,7 @@ Hay un 21? si
 Cada integrante desarrolló y explica un ejercicio. Los tres usan situaciones del día a día para que se vea para qué sirve cada método.
 
 ### 📚 Ejercicio 1: La pila de libros devueltos
-**Expone:** José Luis Hancco Valencia &nbsp;·&nbsp; **Archivo:** [`ejercicio1_pila_de_libros_facil.cpp`](ejercicio1_pila_de_libros_facil.cpp)
+**Expone:** José Luis Hancco Valencia &nbsp;·&nbsp; **Archivo:** [`ejercicio1_pila_de_libros.cpp`](ejercicio1_pila_de_libros.cpp)
 
 **Resumen.** En la mesa de la biblioteca los libros devueltos se apilan: el último que llega queda arriba. Eso es justo lo que hace `push_front`. El programa apila tres libros, muestra el de arriba con `front`, cuenta cuántos hay con `distance` (porque no existe `size`), mete un libro debajo del primero con `insert_after` y al final los va guardando uno por uno con `pop_front` hasta que la pila queda vacía.
 
@@ -222,7 +222,7 @@ Pila vacia? si
 </details>
 
 ### 📝 Ejercicio 2: Juntar las notas de dos secciones
-**Expone:** Sebastián Coaguila &nbsp;·&nbsp; **Archivo:** [`ejercicio2_notas_secciones_intermedio.cpp`](ejercicio2_notas_secciones_intermedio.cpp)
+**Expone:** Sebastián Coaguila &nbsp;·&nbsp; **Archivo:** [`ejercicio2_notas_secciones.cpp`](ejercicio2_notas_secciones.cpp)
 
 **Resumen.** Tenemos las notas de la sección A y de la sección B, y queremos una sola lista limpia. Primero se ordenan las dos con `sort`, porque `merge` solo funciona bien con listas ya ordenadas. `merge` pasa los nodos de B a A sin copiarlos, así que B queda vacía. Luego `unique` quita las notas repetidas (sirve porque ya están ordenadas y los repetidos quedan juntos), `remove_if` con una lambda saca a los desaprobados y `reverse` deja la lista de mayor a menor.
 
@@ -243,7 +243,7 @@ Mayor a menor: 20 18 17 15 14 11
 </details>
 
 ### 🧾 Ejercicio 3: Lista de asistencia en orden alfabético
-**Expone:** Robert Vilca &nbsp;·&nbsp; **Archivo:** [`ejercicio3_lista_asistencia_dificil.cpp`](ejercicio3_lista_asistencia_dificil.cpp)
+**Expone:** Robert Vilca &nbsp;·&nbsp; **Archivo:** [`ejercicio3_lista_asistencia.cpp`](ejercicio3_lista_asistencia.cpp)
 
 **Resumen.** Los alumnos llegan en desorden y la lista tiene que quedar siempre en orden alfabético. Aquí se ve el truco más importante de `forward_list`: se camina con **dos iteradores**, `anterior` y `actual`. Para insertar, se avanza hasta encontrar el lugar y se usa `insert_after(anterior, ...)`. Si el nombre va primero, `anterior` sigue en `before_begin()` y el alumno queda al inicio. Para retirar a un alumno se hace lo mismo y se borra con `erase_after(anterior)`. Si el nombre no está en la lista, no se toca nada.
 
@@ -271,41 +271,55 @@ Lista final:
 
 <br>
 
-## 🏆 Problema de OmegaUP: Josefo
+## 🏆 Problema de OmegaUP: 1502 Josephus
 
-**Expone:** Robert Vilca &nbsp;·&nbsp; **Archivo:** [`omegaup_josefo.cpp`](omegaup_josefo.cpp) &nbsp;·&nbsp; **Problema:** [enlace en OmegaUP](omegaup_josefo.cpp)
+**Expone:** Robert Vilca &nbsp;·&nbsp; **Archivo:** [`omegaup_josephus.cpp`](omegaup_josephus.cpp) &nbsp;·&nbsp; **Problema:** [omegaup.com/arena/problem/josephus](https://omegaup.com/arena/problem/josephus/)
 
-**Enunciado.** Hay `n` personas en círculo, numeradas del 1 al `n`. Se cuenta de `k` en `k` y la persona donde cae la cuenta sale del círculo. Se sigue contando desde la siguiente hasta que queda una sola. Hay que imprimir el orden en que salen y quién sobrevive.
+**Enunciado.** Hay `n` olímpicos en círculo. Se cuenta de `m` en `m` desde el primero y el m-ésimo sale. Se sigue contando desde el siguiente hasta que no queda nadie. Hay que imprimir, en una sola línea, el orden en que salen los `n`. Límites: `1 ≤ n, m ≤ 100 000` y 2 segundos por caso.
 
 | Entrada | Salida |
-|:---:|:---|
-| `7 3` | `3 6 2 7 5 1`<br>`Sobreviviente: 4` |
+|:---:|:---:|
+| `5 3` | `3 1 5 2 4` |
 
-**¿Por qué forward_list?** Porque todo el problema es **avanzar y borrar al siguiente**, y eso es lo que mejor hace este container: `erase_after` borra en O(1) sin mover a nadie.
+**¿Por qué forward_list?** Porque todo el problema es avanzar por el círculo y sacar gente, y eso es lo que mejor hace este container.
 
-**Idea de la solución.**
-1. **Llenar:** `push_front` desde `n` hasta 1, así la lista queda `1, 2, ..., n`.
-2. **Contar:** un iterador `anterior` avanza `k - 1` veces. Cuando llega al último nodo, vuelve a `before_begin()`: así se simula el círculo.
-3. **Sacar:** se imprime el siguiente de `anterior` y se borra con `erase_after(anterior)`.
-4. Se repite hasta que queda uno, que es `front()`.
+**Primer intento: persona por persona.** Una `forward_list<int>` con los `n` olímpicos y un iterador que avanza de uno en uno y borra con `erase_after`. Da la respuesta correcta, pero con `n = m = 100 000` son miles de millones de pasos: en nuestras pruebas tardó unos **10 segundos**, y el límite es 2.
+
+**Solución final: una forward_list de bloques.**
+1. **Bloques:** la lista guarda grupitos de unas 316 personas (raíz de `n`), cada uno en un `vector<int>`: `forward_list<vector<int>>`.
+2. **Contar:** a la posición se le suma `(m - 1) % quedan`, porque dar vueltas completas no cambia a quién le toca.
+3. **Saltar:** si la posición se pasa del bloque actual, se salta el bloque entero de una vez. Al llegar al final de la lista, `volverSiFin()` regresa al primer bloque y así se simula el círculo.
+4. **Borrar:** la persona sale de su bloque; si el bloque queda vacío, `erase_after(previo)` lo quita de la lista.
 
 ```cpp
-auto anterior = circulo.before_begin();
-while (quedan > 1) {
-    for (int paso = 0; paso < k - 1; paso++) {
-        ++anterior;
-        if (next(anterior) == circulo.end())   // dimos la vuelta
-            anterior = circulo.before_begin();
+while (quedan > 0) {
+    pos += (m - 1) % quedan;              // las vueltas completas no cambian nada
+    while (pos >= (int)actual->size()) {  // saltamos bloques enteros
+        pos -= actual->size();
+        previo = actual++;
+        volverSiFin();
     }
-    cout << *next(anterior) << " ";
-    circulo.erase_after(anterior);
+    cout << (*actual)[pos];
+    actual->erase(actual->begin() + pos);
     quedan--;
-    if (next(anterior) == circulo.end())
-        anterior = circulo.before_begin();
+    if (quedan > 0) cout << " ";
+    if (actual->empty()) {                // bloque vacio: lo sacamos de la lista
+        actual = bloques.erase_after(previo);
+        pos = 0;
+    } else if (pos == (int)actual->size()) {
+        previo = actual++;
+        pos = 0;
+    }
+    volverSiFin();
 }
 ```
 
-✔️ **Verificación:** la solución se probó con todos los casos de `n` y `k` entre 1 y 14 (196 casos) contra una simulación independiente, y coincidió en todos.
+| Versión | Tiempo con `n = m = 100 000` |
+|:---|:---:|
+| Persona por persona | ~10 s ❌ |
+| Bloques en una forward_list | ~0,04 s ✅ |
+
+✔️ **Verificación:** la solución se comparó con una simulación independiente en todos los casos con `n` y `m` entre 1 y 59, en casos aleatorios y en casos grandes de hasta 100 000, y coincidió en todos.
 
 <br>
 
@@ -317,8 +331,8 @@ Con g++ (C++11 o superior):
 g++ -std=c++17 -Wall ejercicio1_pila_de_libros.cpp -o ejercicio1
 ./ejercicio1
 
-g++ -std=c++17 -Wall omegaup_josefo.cpp -o josefo
-echo "7 3" | ./josefo
+g++ -std=c++17 -O2 omegaup_josephus.cpp -o josephus
+echo "5 3" | ./josephus
 ```
 
 También se pueden pegar directamente en [OnlineGDB](https://www.onlinegdb.com/online_c++_compiler) eligiendo el lenguaje C++17.
@@ -333,7 +347,7 @@ G07-forward_list/
 ├── ejercicio1_pila_de_libros.cpp     # José Luis Hancco Valencia
 ├── ejercicio2_notas_secciones.cpp    # Sebastián Coaguila
 ├── ejercicio3_lista_asistencia.cpp   # Robert Vilca
-├── omegaup_josefo.cpp                # Robert Vilca
+├── omegaup_josephus.cpp              # Robert Vilca
 └── ejemplo_algorithms.cpp            # complemento con <algorithm>
 ```
 
@@ -353,6 +367,7 @@ G07-forward_list/
 - cppreference.com. *std::forward_list*. https://en.cppreference.com/w/cpp/container/forward_list
 - cppreference.com. *Containers library*. https://en.cppreference.com/w/cpp/container
 - cppreference.com. *Algorithms library*. https://en.cppreference.com/w/cpp/algorithm
+- omegaUp. *1502. Josephus*. https://omegaup.com/arena/problem/josephus/
 - Wikipedia. *Problema de Flavio Josefo*. https://es.wikipedia.org/wiki/Problema_de_Flavio_Josefo
 
 <br>
