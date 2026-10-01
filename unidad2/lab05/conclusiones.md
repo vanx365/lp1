@@ -89,7 +89,7 @@ Porque el `map` mantiene sus claves ordenadas en una estructura de árbol balanc
 
 > `deque` y `list` se completaron como referencia; los resultados del Grupo 1 deben contrastarse en la puesta en común.
 
-## 4. ¿Por qué no un `vector<Estudiante>`? (pregunta de la exposición)
+## 4. ¿Por qué no un `vector<Estudiante>`?
 
 Con un `vector<Estudiante>` tendríamos que:
 

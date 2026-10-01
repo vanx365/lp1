@@ -5,7 +5,7 @@
 
 **Integrantes:**
 
-- Sebastian Coaguila Suarez 
+- Sebastian Coaguila Suarez
 - Cristhian Chunga Pacheco
 - Robert Vilca Mendoza
 
@@ -86,3 +86,56 @@ lab05/
 ├── main_grupo2.cpp
 └── conclusiones.md
 ```
+
+## 7. Cómo se resolvió el problema
+
+Cada requisito del enunciado se resolvió con una función de `main.cpp` y una operación de la STL:
+
+| Requisito | Función | Solución |
+| --- | --- | --- |
+| No existen códigos duplicados | `registrarEstudiante()` | `codigos.insert(codigo)` devuelve un `pair<iterador, bool>`. Si el `bool` es `false`, el código ya existía y la función retorna `false` sin tocar el `map`. |
+| Códigos ordenados | `mostrarCodigos()` | El `set` los guarda siempre en orden ascendente. Basta recorrerlo con iteradores (`begin()` → `end()`), sin ordenar manualmente. |
+| Buscar estudiante por código | `buscarPorCodigo()` | `estudiantes.find(codigo)` devuelve un iterador. Si es `end()`, no existe. Si no, `it->first` es el código y `it->second` es el `Estudiante`. No se recorre todo el contenedor. |
+| Eliminar estudiante | `eliminarEstudiante()` | `erase(codigo)` en el `set` y en el `map`. Ambos devuelven cuántos elementos borraron; solo se informa éxito si los dos borraron algo. |
+| Mostrar toda la información | `mostrarEstudiantes()` | Recorrido del `map` con iteradores. Sale ordenado por código porque el `map` ordena por clave. |
+| Estudiante con mayor promedio | `mostrarMayorPromedio()` | El `map` está ordenado por código, no por promedio, así que se recorre con `max_element` y una lambda que compara `promedio`. |
+| Verificar si un código existe | `verificarCodigo()` | `codigos.find(codigo)` y comparación con `end()`. Solo confirma existencia, sin traer datos. |
+
+### Flujo de un registro
+
+```text
+Usuario ingresa código
+        │
+        ▼
+¿codigos.count(codigo) > 0? ── sí ──► "Código duplicado", no pide más datos
+        │ no
+        ▼
+Se piden nombre, carrera y promedio (con validación)
+        │
+        ▼
+codigos.insert(codigo)  ──►  estudiantes.insert({codigo, estudiante})
+        │
+        ▼
+Set y map quedan sincronizados
+```
+
+### Por qué usamos los dos contenedores
+
+- **`set<int>`:** responde «¿existe este código?». Garantiza unicidad y orden, y no guarda datos adicionales.
+- **`map<int, Estudiante>`:** responde «¿qué estudiante tiene este código?». Relaciona código → estudiante.
+- **Sincronía:** registrar y eliminar actualizan ambos en la misma función. Así, los códigos del `set` siempre coinciden con las claves del `map`.
+
+### Validación de entrada
+
+- Código y promedio se leen con `getline` y se convierten con `stoi` / `stod`. Si no se puede convertir, se vuelve a pedir.
+- El promedio debe estar entre 0 y 20.
+- Nombre y carrera no pueden estar vacíos.
+
+### Las pruebas del reto (opción 8)
+
+Las cuatro pruebas usan contenedores propios, así que no alteran los datos del sistema:
+
+1. **Duplicados:** inserta `1001, 1002, 1003, 1001, 1002` y muestra qué `insert()` devuelve `false`.
+2. **Orden:** inserta `1050, 1002, 1010, 1001, 1030` y muestra que salen ordenados.
+3. **Búsqueda:** busca `1001, 1050, 9999` con `set.find()` y `map.find()`.
+4. **Clave/valor:** muestra qué representan la clave y el valor en `map<int, Estudiante>`.
