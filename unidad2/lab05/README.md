@@ -5,9 +5,9 @@
 
 **Integrantes:**
 
-- | Sebastian Coaguila Suarez | 100% |
-- | Cristhian Chunga Pacheco | 100% |
-- | Robert Vilca Mendoza | 100% |
+| Sebastian Coaguila Suarez | 100% |
+| Cristhian Chunga Pacheco | 100% |
+| Robert Vilca Mendoza | 100% |
 
 ## 1. Descripción
 
