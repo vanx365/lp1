@@ -81,7 +81,7 @@ El programa arranca con tres estudiantes de ejemplo (1001, 1002 y 1003).
 ## 6. Archivos
 
 ```text
-laboratorio05_grupo2/
+lab05/
 ├── README.md
 ├── main_grupo2.cpp
 └── conclusiones.md
