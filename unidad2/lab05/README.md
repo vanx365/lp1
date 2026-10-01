@@ -4,7 +4,8 @@
 **Lenguaje:** C++17 · **Modalidad:** trabajo grupal
 
 **Integrantes:**
-
+| Integrante | Participacion |
+| --- | --- |
 | Sebastian Coaguila Suarez | 100% |
 | Cristhian Chunga Pacheco | 100% |
 | Robert Vilca Mendoza | 100% |
