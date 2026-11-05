@@ -10,7 +10,7 @@ lab07/
 
 **Integrantes:**
 | Integrante | 
-:---:|:---|
+:---:|
 | Sebastian Coaguila Suarez | 
 | Cristhian Chunga Pacheco |
 | Robert Vilca Mendoza | 
