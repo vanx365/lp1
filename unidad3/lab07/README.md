@@ -17,7 +17,7 @@ lab07/
 
 ## Requisitos
 
-- JDK 11 o superior (`java -version` y `javac -version` para verificar).
+- JDK 11 o superior (`java -version` y `javac -version` para verificar)..
 
 ## Compilación y ejecución
 
