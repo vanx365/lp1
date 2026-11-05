@@ -9,11 +9,11 @@ lab07/
 ```
 
 **Integrantes:**
-| Integrante | Participacion |
+| Integrante | 
 :---:|:---|
-| Sebastian Coaguila Suarez | 100% |
-| Cristhian Chunga Pacheco | 100% |
-| Robert Vilca Mendoza | 100% |
+| Sebastian Coaguila Suarez | 
+| Cristhian Chunga Pacheco |
+| Robert Vilca Mendoza | 
 
 ## Requisitos
 
