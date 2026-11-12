@@ -1,6 +1,6 @@
 # Práctica N.° 02 – Ejercicios básicos de programación en Java
 
-**Curso:** Lenguaje de Programación 1 – Unidad 3, Laboratorio 07
+**Curso:** Lenguaje de Programación 1 – Unidad 3, Laboratorio 07 parte 2
 
 **Integrantes:**
 - Edwin Sebastian de Jesus Coaguila Suarez
@@ -29,18 +29,16 @@ javac -version
 
 ```
 .
-├── README.md
-├── src/
-│   ├── InformacionPersonal.java      (Ejercicio 01)
-│   ├── DatosProducto.java            (Ejercicio 02)
-│   ├── CalculoSueldo.java            (Ejercicio 03)
-│   ├── CalculadoraGeometrica.java    (Ejercicio 04)
-│   ├── EvaluacionAcademica.java      (Ejercicio 05)
-│   ├── OperacionesCiclicas.java      (Ejercicio 06)
-│   ├── OperacionesMetodos.java       (Ejercicio 07)
-│   ├── ArregloNotas.java             (Ejercicio 08)
-│   └── MenuMatematico.java           (Ejercicio 09)
-└── evidencias/                       (salidas de ejecución de cada programa)
+├── README.md 
+├── InformacionPersonal.java      (Ejercicio 01)
+├── DatosProducto.java            (Ejercicio 02)
+├── CalculoSueldo.java            (Ejercicio 03)
+├── CalculadoraGeometrica.java    (Ejercicio 04)
+├── EvaluacionAcademica.java      (Ejercicio 05)
+├── OperacionesCiclicas.java      (Ejercicio 06)
+├──OperacionesMetodos.java       (Ejercicio 07)
+├── ArregloNotas.java             (Ejercicio 08)
+├── MenuMatematico.java           (Ejercicio 09)
 ```
 
 ## Compilación y ejecución
