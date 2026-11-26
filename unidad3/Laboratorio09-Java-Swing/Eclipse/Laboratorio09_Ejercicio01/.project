@@ -1,0 +1,15 @@
+xml version=1.0 encoding=UTF-8
+projectDescription
+	nameLaboratorio09_Ejercicio01name
+	commentcomment
+	projectsprojects
+	buildSpec
+		buildCommand
+			nameorg.eclipse.jdt.core.javabuildername
+			argumentsarguments
+		buildCommand
+	buildSpec
+	natures
+		natureorg.eclipse.jdt.core.javanaturenature
+	natures
+projectDescription
