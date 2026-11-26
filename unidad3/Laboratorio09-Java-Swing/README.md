@@ -7,6 +7,10 @@ Dos aplicaciones de escritorio con Java Swing, desarrolladas en **Eclipse** y re
 | 01 | `FormularioEstudiante` | Registro de estudiantes: código, nombres, edad, carrera y género. Botones Registrar / Limpiar / Salir. |
 | 02 | `Calculadora` | Suma, resta, multiplicación y división con validaciones. Botones Limpiar / Salir. |
 
+## Integrante
+- Edwin Sebastian de Jesus Coaguila Suarez
+
+
 ## Estructura
 
 ```text
